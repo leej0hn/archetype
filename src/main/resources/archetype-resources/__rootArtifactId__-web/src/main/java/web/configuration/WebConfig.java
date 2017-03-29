@@ -18,4 +18,5 @@ import org.springframework.stereotype.Component;
 @Data
 public class WebConfig {
     private String ips;
+    private String tokenHeader;
 }
