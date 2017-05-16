@@ -150,5 +150,34 @@
         </fileSet>
       </fileSets>
     </module>
+    <module id="${rootArtifactId}-persistence-mongo" dir="__rootArtifactId__-persistence-mongo" name="${rootArtifactId}-persistence-mongo">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/test/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/test/resources</directory>
+          <includes>
+            <include>**/*.yml</include>
+            <include>**/*.example</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
   </modules>
 </archetype-descriptor>
