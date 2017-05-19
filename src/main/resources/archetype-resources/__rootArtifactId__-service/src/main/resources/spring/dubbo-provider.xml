@@ -14,6 +14,7 @@
 
         <dubbo:application name="${symbol_pound}{application.name}" logger="slf4j"/>
         <dubbo:registry address="${symbol_pound}{application.registry}"></dubbo:registry>
+        <dubbo:protocol  port="-1"></dubbo:protocol>
 
         <dubbo:service version="1.0.0" retries="0" interface="${package}.service.TestService" ref="testServiceImpl"/>
 
