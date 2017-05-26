@@ -2,9 +2,12 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 package ${package};
-
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * <p>function:
@@ -13,11 +16,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <p>Version: 1.0
  */
 @SpringBootApplication
-public class WebApplication {
+@Slf4j
+public class WebApplication implements CommandLineRunner {
+
+    @Value("${symbol_dollar}{dubbo.name}")
+    private String dubboName;
 
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(WebApplication.class);
         application.run(args);
     }
 
+    @Override
+    public void run(String... args) throws Exception {
+        CountDownLatch countDownLatch = new CountDownLatch(1);
+        log.info("{} boot successfully", this.dubboName);
+        countDownLatch.await();
+    }
 }

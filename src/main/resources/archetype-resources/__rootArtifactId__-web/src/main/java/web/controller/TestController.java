@@ -2,10 +2,12 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 package ${package}.web.controller;
-
 import ${package}.common.exception.ServiceException;
 import ${package}.common.vo.Response;
+import ${package}.service.TestService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +24,8 @@ import org.springframework.web.servlet.ModelAndView;
 @Slf4j
 @RestController
 public class TestController {
-
+    @Autowired
+    private TestService testService;
 
     @RequestMapping(value = "/api/test", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public Response index() {
