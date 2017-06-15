@@ -19,4 +19,5 @@ import org.springframework.stereotype.Component;
 public class WebConfig {
     private String ips;
     private String tokenHeader;
+    private String fileUploadPath;
 }
