@@ -73,6 +73,12 @@
 
             <dependency>
                 <groupId>${groupId}</groupId>
+                <artifactId>${rootArtifactId}-common-mongo</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>${groupId}</groupId>
                 <artifactId>${rootArtifactId}-persistence</artifactId>
                 <version>${version}</version>
             </dependency>
