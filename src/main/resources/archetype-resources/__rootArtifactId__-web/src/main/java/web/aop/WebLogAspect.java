@@ -65,7 +65,7 @@ public class WebLogAspect {
         }
         log.info("=======response after===========${symbol_escape}n [ContentType: {}/{}]-[method: {}]-[sessionId: {}] ${symbol_escape}n [url: {}] ${symbol_escape}n [params: {}]-[postData: {}] ${symbol_escape}n [respons: {}].",
                 request.getContentType(), request.getCharacterEncoding(),request.getMethod(),request.getSession().getId(),
-                request.getRequestURL(),request.getQueryString(),postData.toString(),reponse.toString());
+                request.getRequestURL(),request.getQueryString(),postData.toString(),reponse == null?null:reponse.toString());
     }
 
 }
