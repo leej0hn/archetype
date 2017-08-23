@@ -30,10 +30,12 @@
             <artifactId>${rootArtifactId}-utils</artifactId>
         </dependency>
 
+        <!--
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-persistence</artifactId>
         </dependency>
+        -->
 
         <dependency>
             <groupId>${groupId}</groupId>
